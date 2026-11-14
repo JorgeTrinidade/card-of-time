@@ -1,0 +1,128 @@
+<style>
+        html {
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #Combate {
+            perspective: 100px;
+        }
+
+        .inimigo {
+            position: absolute;
+            border: 2px solid black;
+            border-radius: 100%;
+            background-color: red;
+            width: 32px;
+            height: 32px;
+            translate: 25% 79vh;
+        }
+
+        .jogador {
+            position: absolute;
+            border: 2px solid black;
+            border-radius: 100%;
+            background-color: var(--cor);
+            width: 32px;
+            height: 32px;
+            translate: 25% 79vh;
+        }
+
+        .Icon {
+            border: 2px solid black;
+            width: 64px;
+            height: 64px;
+        }
+
+        #menuLateral {
+            width: 10vw;
+            height: 100vh;
+            overflow-y: scroll;
+            z-index: 1;
+            background-color: blanchedalmond;
+        }
+
+        #Combate {
+            background-color: rgb(92, 195, 255);
+            width: 90vw;
+            height: 100vh;
+            z-index: 0;
+        }
+
+        .cartao {
+            padding: 10px;
+        }
+
+        #Chao {
+            background: url(chao.png);
+            background-repeat: repeat-x;
+            background-size: 10% 100%;
+            image-rendering: pixelated;
+            height: 10vh;
+            width: 120%;
+            translate: -10% 87vh;
+            rotate: 1 0 0 5deg;
+            animation: andarChao 4s linear infinite;
+        }
+
+        .BarraVida {
+            position: absolute;
+            border: 3px solid black;
+            border-radius: 25%;
+            top: -32px;
+            width: 32px;
+            height: 16px;
+        }
+
+        .BarraVidaVida {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to left,#f9f9f900 50%, #ff0000 50%);
+            background-size: 200%;
+            background-position-x: 0%;
+        }
+
+        .Ataque {
+            background: url("Ataque.png");
+            width: 32px;
+            height: 64px;
+            background-repeat: no-repeat;
+            position: absolute;
+            translate: 25% 79vh;
+        }
+
+        @keyframes andarChao {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: -100% 0;
+            }
+        }
+
+        #MultiplicadorDano{
+            position: absolute;
+            left: 50%;
+            font-size: 64px;
+            border: 1px solid black;
+            border-radius: 100%;
+            width: 150px;
+            text-align: center;
+            rotate: 10deg;
+            opacity: 0;
+        }
+    </style>
+<div id="Combate" onclick="cliker()">
+        <span id="money">Dinheiro:0</span>
+        <div id="Chao"></div>
+    </div>
+    <p id="MultiplicadorDano">1.0</p>

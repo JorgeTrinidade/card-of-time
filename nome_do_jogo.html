@@ -1,70 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="js.js" defer></script>
-    <style>
-        html{
-            overflow: hidden;
-        }
-        .inimigo{
-            border: 2px solid black;
-            border-radius: 100%;
-            background-color: red;
-            width: 32px;
-            height: 32px;
-            position: relative;
-            left: 101%;
-        }
-
-        .jogador{
-            border: 2px solid black;
-            border-radius: 100%;
-            background-color: var(--cor);
-            width: 32px;
-            height: 32px;
-            position: relative;
-            left: 10%;
-        }
-        .ShopClass{
-            border: 2px solid black;
-            width: 80px;
-        }
-        .Icon{
-            border: 2px solid black;
-            width: 64px;
-            height: 64px;
-        }
-        #ShopClass{
-            overflow: hidden;
-            height: 90vh;
-        }
-    </style>
+    <script src="script.js" defer></script>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<!-- esquerda -->
-    <div id="ShopClass">
-        <h1>Class</h1>
+    <div id="menuLateral">
+        <div class="UIBotoesLateral">
+            <h1 id="menuLateralTitulo">Classe</h1>
+            <div class="UIBotaoLateralSecundario">
+                <div class="UIBotaoLateral ativo" id="Esquerdo" onclick="escolherMenuLateral('Esquerdo')">Classe</div>
+                <div class="UIBotaoLateral" id="Direito" onclick="escolherMenuLateral('Direito')">Clicker</div>
+            </div>
+            <div id="menuLateralClasses"></div>
+            <div id="menuLateralClicker"></div>
         </div>
     </div>
-<!--cetro-->
-    <div class="centro">
-       
-        
-        <div>
-            <span>&#60-nome-&#62</span> 
 
-        </div>
-
-
-    </div>
-    <!--direita-->
-
-    <div class="direita"> 
-        <span id="money">Dinheiro:0</span>
-        <button id="cliker" onclick="cliker()"> buy </button>
-    </div>
+    
 </body>
+
 </html>

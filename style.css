@@ -1,0 +1,124 @@
+/** Variaveis Pra tudo **/
+:root {
+    --cor-primaria-menu-lateral: hsl(119, 47%, 25%);
+    --cor-secundaria-menu-lateral: #31832f;
+    --cor-letras-menu-lateral: #153436;
+    --cor-hover: hsl(119, 47%, 30%);
+    --cor-active: hsl(119, 47%, 25%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+/** Menu vertical **/
+#menuLateral {
+    background-color: var(--cor-primaria-menu-lateral);
+    width: 10vw;
+    height: 100vh;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+    color: var(--cor-letras-menu-lateral);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+}
+
+#menuLateralTitulo {
+    background-color: var(--cor-secundaria-menu-lateral);
+    margin-top: 0;
+    border-radius: 10% 10% 0 0;
+    padding: 16px;
+}
+
+#menuLateralClasses {
+    background-color: var(--cor-secundaria-menu-lateral);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.botaoMenuLateral {
+    background-color: hsl(119, 47%, 30%);
+    box-shadow: 5px 5px 5px hsl(119, 47%, 25%);
+    height: 40px;
+    width: 100px;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botaoMenuLateral:hover {
+    background-color: var(--cor-hover);
+    box-shadow: 2px 2px 2px hsl(119, 47%, 20%);
+}
+
+.botaoMenuLateral:active {
+    color: var(--cor-active);
+    background-color: hsl(119, 47%, 20%);
+}
+
+.UIBotoesLateral {
+    width: 90%;
+    align-items: center;
+    margin-inline-start: 5%;
+
+}
+
+.UIBotaoLateralSecundario {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.UIBotaoLateral {
+    background-color: var(--cor-secundaria-menu-lateral);
+    width: 50%;
+    height: 32px;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+#Esquerdo {
+    border-radius: 0 0 0 20%;
+}
+
+#Direito {
+    border-radius: 0 0 20% 0;
+}
+
+.UIBotaoLateral:hover {
+    color: #31832f;
+    background-color: var(--cor-hover);
+}
+
+.UIBotaoLateral:active {
+    color: #6ca823;
+    background-color: var(--cor-active);
+}
+
+.imagemMenu {
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    border-radius: 9px;
+}
+
+.menuSecundarioClasses {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    padding-bottom: 10%;
+}
+
+.ativo {
+    background-color: var(--cor-hover);
+}
